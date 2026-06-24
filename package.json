@@ -1,0 +1,25 @@
+{
+  "name": "vnexpress-news-email",
+  "version": "1.0.0",
+  "description": "Automation tool to fetch top 10 latest news from VnExpress and send them via email",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "playwright",
+    "automation",
+    "vnexpress",
+    "email"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "fast-xml-parser": "^5.3.3",
+    "nodemailer": "^9.0.1",
+    "playwright": "^1.61.1"
+  }
+}
