@@ -6,7 +6,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "preview": "node src/preview.js"
+    "preview": "node src/preview.js",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "keywords": [
     "nodejs",
@@ -22,5 +24,8 @@
     "fast-xml-parser": "^5.3.3",
     "nodemailer": "^9.0.1",
     "playwright": "^1.61.1"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.9"
   }
 }
