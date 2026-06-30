@@ -16,7 +16,7 @@ describe("buildNewsEmailTemplate", () => {
         ];
         const html = buildNewsEmailTemplate(newList);
 
-        expect(html).toContain('Bản tin VnExpress mới nhất');
+        expect(html).toContain('Tin mới nhất từ VnExpress');
         expect(html).toContain('Tiêu đề tin tức');
         expect(html).toContain('Đây là mô tả bài viết.');
         expect(html).toContain('09:45, Thứ Tư, 25/06/2026');
@@ -29,8 +29,8 @@ describe("buildNewsEmailTemplate", () => {
         const newList = [
             {
                 id: 1,
-                title: "Tiêu đề tin tức",
-                link: "https://vnexpress.net/test-news",
+                title: "Tin không có ảnh",
+                link: "https://vnexpress.net/no-image",
                 imageUrl: "",
                 description: "Mô tả không có ảnh.",
                 publishedAt: "Không rõ thời gian",
@@ -38,7 +38,7 @@ describe("buildNewsEmailTemplate", () => {
         ];
         const html = buildNewsEmailTemplate(newList);
 
-        expect(html).toContain('Tin không có ảnh');
+        expect(html).toContain('Mô tả không có ảnh.');
         expect(html).not.toContain("<img");
     });    
 });
