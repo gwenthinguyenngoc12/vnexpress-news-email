@@ -36,7 +36,9 @@ export async function getLatestVnExpressNews() {
 
     const data = parser.parse(xmlText);
 
-    const items = data?.rss?.channel?.item || [];
+    const rawItems = data?.rss?.channel?.item || [];
+
+    const items = Array.isArray(rawItems) ? rawItems : [rawItems];
 
     const newsList = items.slice(0, MAX_NEWS_ITEMS).map((item, index) => {
       return {
